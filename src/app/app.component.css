@@ -1,4 +1,18 @@
 .simbolo
 {
-    text-anchor: start;
+    color:blanchedalmond;
+    font-size: larger;
+    text-align: center;
+}
+
+.cajaEntrada1
+{
+    position: relative; 
+    left: 70px;
+}
+
+.cajaEntrada2
+{
+    position: relative; 
+    left: 100px;
 }

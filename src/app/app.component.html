@@ -1,31 +1,29 @@
-!<!DOCTYPE html>
-
-
-<div>
-  <label>Valor 1:  </label>
-  <input type="number" [(ngModel)]="valor1">
-  <label>Valor 2:  </label>
-  <input type="number" [(ngModel)]="valor2">
- 
+<!DOCTYPE html>
+<div style="font-style: italic; background-color: blueviolet; border-color: blueviolet; ">
+  <label class="cajaEntrada1">Valor 1:    </label>
+  <input class="cajaEntrada1"  type="number" [(ngModel)]="valor1">
+  <label class="cajaEntrada2" >Valor 2:    </label>
+  <input  class="cajaEntrada2" type="number" [(ngModel)]="valor2"> 
 </div>
 
-<div  class="btn-group" role="group">
+<div  class="btn-group" role="group" style="height:40px; width:10px; position: relative;
+left: 180px;">
   <button class="btn btn-outline-primary active" (click)="onSuma()">
-    <p class="simbolo">+</p> 
+    <p class="simbolo"><b>+</b></p> 
   </button>
   <button class="btn btn-outline-danger active " (click)="onResta()">
-    -
+    <p class="simbolo"><b>-</b></p> 
   </button>
   <button class="btn btn-outline-success active" (click)="onMultiplicar()">
-    *
+    <p class="simbolo"><b>*</b></p> 
   </button>
   <button class="btn btn-outline-warning active" (click)="onDividir()">
-    /
+    <p class="simbolo"><b>/</b></p> 
   </button>
  
 </div>
 
-<div>
-  Resultado: {{resultado}}
+<div style="font-size: larger;">
+  <b>Resultado:   </b> {{resultado}}
 </div>
   
