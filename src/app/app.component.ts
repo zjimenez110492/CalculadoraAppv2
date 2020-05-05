@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { operacion } from './operacion.model';
 
 @Component({
   selector: 'app-root',
@@ -7,23 +8,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'CalculadoraApp';
-  valor1:number=0;
-  valor2:number=0;
-  resultado:number=0;
-  onSuma()
+  operac:operacion;
+  v1:number;
+  v2:number;
+  op:string;
+  onEjecutar(oper:operacion)
   {
-   this.resultado=this.valor1+this.valor2;
+    this.operac=oper;
+    this.v1=oper.onGetv1();
+    this.v2=oper.onGetv2();
+    this.op=oper.onGetOp();
+    console.log("APP.COMPONENT.TS:   onEjecutar(oper:operacion).  Valor1: "+this.v1+" Valor2: "+this.v2);
   }
-  onResta()
-  {
-    this.resultado=this.valor1-this.valor2;  
-  }
-  onMultiplicar()
-  {
-    this.resultado=this.valor1*this.valor2;  
-  }
-  onDividir()
-  {
-    this.resultado=this.valor1/this.valor2;  
-  }
+  
 }
